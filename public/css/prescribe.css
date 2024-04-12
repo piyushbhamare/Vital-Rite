@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+h2{
+    text-align: center;
+    font-family: 'Poppins', sans-serif ;
+    font-weight: bolder;
+}
+
+form{
+    margin-top: 25px;
+    padding-left: 725px;
+}
+/* Add custom CSS for single line form groups */
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px; /* Add margin bottom for spacing between form groups */
+}
+
+.form-group > * {
+  flex: 0 0 33.33%; /* Each field takes up 1/3 of the container */
+  margin-right: 10px; /* Add spacing between fields */
+}
+
+@media (max-width: 768px) {
+  .form-group > * {
+      flex: 0 0 100%; /* Each field takes up full width on smaller screens */
+      margin-right: 0; /* No margin between fields on smaller screens */
+      margin-bottom: 10px; /* Add margin bottom for spacing between fields */
+  }
+}
+
+  
+  /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+  
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prescription Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Medicine 1</th>
+                    <th>Medicine 2</th>
+                    <th>Medicine 3</th>
+                    <th>Diagnosis 1</th>
+                    <th>Diagnosis 2</th>
+                    <th>Diagnosis 3</th>
+                    <th>Time 1</th>
+                    <th>Time 2</th>
+                    <th>Time 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (data.length > 0) { 
+                    var i = 1;
+                    data.forEach(function(data){%>
+                        <tr>
+                            <td><%= data.id %></td>
+                            <td><%= data.name %></td>
+                            <td><%= data.med1 %></td>
+                            <td><%= data.med2 %></td>
+                            <td><%= data.med3 %></td>
+                            <td><%= data.diag1 %></td>
+                            <td><%= data.diag2 %></td>
+                            <td><%= data.diag3 %></td>
+                            <td><%= data.time1 %></td>
+                            <td><%= data.time2 %></td>
+                            <td><%= data.time3 %></td>
+                        </tr>
+                    <% })} %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

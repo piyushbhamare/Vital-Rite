@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Rite</title>
+    <link rel="stylesheet" href="/css/docmainpage.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <%- include('partials/header_doc') %>
+    <div class="page">
+        <% if (locals.data) { %>
+            <div class="active-prescription">
+                <header class="heading">Appointments</header>
+                <span>
+                    <h5 class="content">Paitent Name: <%= data %></h5>
+                    <a href="/prescribe" text-align="center">Prescribe</a>
+                </span>
+            </div>
+        <% } else { %>
+            <div class="active-prescription"></div>
+                <header class="heading">Appointments</header>
+                <p class="content">You don't have any Appointments.</p>
+            </div>
+        <% } %>
+        <div class="previous-prescription">
+            <header class="heading">Online Consultation</header>
+            <p class="content">You don't have any Online Consultations.</p>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
